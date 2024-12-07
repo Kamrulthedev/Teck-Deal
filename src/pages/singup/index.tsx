@@ -105,7 +105,7 @@ if(loading){
       <div className="flex min-h-full w-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full p-6 bg-white rounded-lg border border-gray-200 shadow-md max-w-md space-y-8">
           <div>
-            <h2 className="mt-1 text-center text-2xl font-bold tracking-tight text-gray-900">
+            <h2 className="mt-1 text-center text-2xl font-bold tracking-tight text-gray-900 uppercase" >
               Sign Up to your account
             </h2>
           </div>
