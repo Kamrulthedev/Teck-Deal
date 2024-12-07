@@ -9,7 +9,7 @@ const OrderHistory = () => {
     
     useEffect(()=>{
         if (user){
-            fetch(`https://tech-deal-backend-o5ta.vercel.app/orders/${user?.email}`).then(res=>res.json()).then(data=>setOrders(data))
+            fetch(`${process.env.DB_URL}/orders/${user?.email}`).then(res=>res.json()).then(data=>setOrders(data))
         }
     },[user])
     return (

@@ -5,7 +5,7 @@ const AllUsers = () => {
     const [users,setUsers] = useState([])
 
     useEffect(()=>{
-       fetch('https://tech-deal-backend-o5ta.vercel.app/users')
+       fetch(`${process.env.DB_URL}/users`)
        .then(res=>res.json())
        .then(data=>setUsers(data))
     },[])

@@ -8,7 +8,7 @@ const TrandingProducts: NextPage = () => {
   // console.log(products);
 
   useEffect(() => {
-    fetch("https://tech-deal-backend-o5ta.vercel.app/products")
+    fetch(`${process.env.DB_URL}/products`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

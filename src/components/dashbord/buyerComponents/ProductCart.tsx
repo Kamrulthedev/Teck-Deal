@@ -21,7 +21,7 @@ const ProductCart: React.FC<{ product: productInterface }> = ({ product }) => {
     BuyNotify();
     const NewProduct = {product, buyerEmail: user?.email };
     console.log(NewProduct);
-    fetch("https://tech-deal-backend-o5ta.vercel.app/process-order", {
+    fetch(`${process.env.DB_URL}/process-order`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

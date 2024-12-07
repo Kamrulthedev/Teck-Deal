@@ -46,7 +46,7 @@ export default ProductsPage;
 
 //  getStaticPaths function
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch("https://tech-deal-backend-nine.vercel.app/categories");
+  const res = await fetch(`${process.env.DB_URL}/categories`);
   const products = await res.json();
   const paths = products.map((category: { name: string }) => ({
     params: { category: category.name},
@@ -57,7 +57,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps:GetStaticProps = async () => {
   try {
     // const res = await fetch('https://tech-deal-backend-o5ta.vercel.app/products');
-    const res = await fetch('https://tech-deal-backend-nine.vercel.app/products');
+    const res = await fetch(`${process.env.DB_URL}/products`);
     const data: productInterface[] = await res.json();
     return {
       props: {

@@ -43,7 +43,7 @@ const Product: NextPage<{product: productInterface}> = ({product}) => {
     BuyNotify();
     const NewProduct = {product, buyerEmail: user?.email };
     console.log(NewProduct);
-    fetch("https://tech-deal-backend-nine.vercel.app/process-order", {
+    fetch(`${process.env.DB_URL}/process-order`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -221,7 +221,7 @@ export default Product;
 
 //  getStaticPaths function
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch("https://tech-deal-backend-o5ta.vercel.app/products");
+  const res = await fetch(`${process.env.DB_URL}/products`);
   const products = await res.json();
   const paths = products.map((product: { _id: string }) => ({
     params: { productid: product._id},
@@ -238,7 +238,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       throw new Error('Invalid product id');
     }
     
-    const res = await fetch(`https://tech-deal-backend-o5ta.vercel.app/products/${productid}`);
+    const res = await fetch(`${process.env.DB_URL}/products/${productid}`);
     if (!res.ok) {
       throw new Error('Failed to fetch product');
     }

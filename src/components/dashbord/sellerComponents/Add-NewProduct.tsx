@@ -24,7 +24,7 @@ const AddNewProduct = () => {
       verified: true,
       id: Math.random(),
     };
-    fetch("https://tech-deal-backend-o5ta.vercel.app/add-product", {
+    fetch(`${process.env.DB_URL}/add-product`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
