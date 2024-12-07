@@ -58,7 +58,7 @@ E-Shop is an Online Shop Web Application that facilitates buying and selling pro
 
 ## Contributors
 
-- [Raihanul Islam](https://github.com/raihanuldev)
+- [Kamrul Hassan](https://github.com/Kamrulthedev)
 
 ## License
 
