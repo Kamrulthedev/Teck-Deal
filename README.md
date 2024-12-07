@@ -1,4 +1,4 @@
-# E-Shop
+# E-Shop -- Tack Deal
 
 E-Shop is an Online Shop Web Application that facilitates buying and selling products. It provides a platform for buyers to browse and purchase products, sellers to add new products, and administrators to manage users, products, and payments.
 
